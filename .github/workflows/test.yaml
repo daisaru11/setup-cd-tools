@@ -1,0 +1,26 @@
+name: Test
+on: [push]
+jobs:
+  run:
+    name: Run Test
+    runs-on: ${{ matrix.operating-system }}
+    strategy:
+      matrix:
+        operating-system: [ubuntu-latest, windows-latest]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Set Node.js 10.x
+        uses: actions/setup-node@v1
+        with:
+          version: 10.x
+
+      - name: Install
+        run: yarn install
+
+      - name: Lint
+        run: yarn format-check
+
+      - name: Test
+        run: yarn test

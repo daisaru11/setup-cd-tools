@@ -1,0 +1,26 @@
+name: 'Setup CI tools'
+inputs:
+  jq:
+    descriptions: 'The version of jq'
+    required: false
+  yq:
+    descriptions: 'The version of yq'
+    required: false
+  kubectl:
+    descriptions: 'The version of kubectl'
+    required: false
+  kustomize:
+    descriptions: 'The version of kustomize'
+    required: false
+  skaffold:
+    descriptions: 'The version of skaffold'
+    required: false
+  helm:
+    descriptions: 'The version of helm'
+    required: false
+  hub:
+    descriptions: 'The version of hub'
+    required: false
+runs:
+  using: 'node12'
+  main: 'dist/index.js'

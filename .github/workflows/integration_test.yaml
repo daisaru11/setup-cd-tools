@@ -1,0 +1,135 @@
+name: Integration Test
+on: [push]
+jobs:
+  test_jq:
+    name: Run Test (jq)
+    runs-on: ${{ matrix.operating-system }}
+    strategy:
+      matrix:
+        operating-system: [ubuntu-latest, windows-latest]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Run Target Action
+        uses: ./
+        with:
+          jq: '1.6'
+
+      - name: Check Version
+        run: |
+          test "$(jq --version)" == "jq-1.6"
+
+  test_yq:
+    name: Run Test (yq)
+    runs-on: ${{ matrix.operating-system }}
+    strategy:
+      matrix:
+        operating-system: [ubuntu-latest, windows-latest]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Run Target Action
+        uses: ./
+        with:
+          yq: '2.4.1'
+
+      - name: Check Version
+        run: |
+          test "$(yq --version)" == "yq version 2.4.1"
+
+  test_kubectl:
+    name: Run Test (kubectl)
+    runs-on: ${{ matrix.operating-system }}
+    strategy:
+      matrix:
+        operating-system: [ubuntu-latest, windows-latest]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Run Target Action
+        uses: ./
+        with:
+          kubectl: '1.17.0'
+
+      - name: Check Version
+        run: |
+          test "$(kubectl version --client --short)" == "Client Version: v1.17.0"
+
+  test_kustomize:
+    name: Run Test (kustomize)
+    runs-on: ${{ matrix.operating-system }}
+    strategy:
+      matrix:
+        operating-system: [ubuntu-latest, windows-latest]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Run Target Action
+        uses: ./
+        with:
+          kustomize: '3.5.4'
+
+      - name: Check Version
+        run: |
+          node .github/workflows/check_version/kustomize.js 3.5.4
+
+  test_skaffold:
+    name: Run Test (skaffold)
+    runs-on: ${{ matrix.operating-system }}
+    strategy:
+      matrix:
+        operating-system: [ubuntu-latest, windows-latest]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Run Target Action
+        uses: ./
+        with:
+          skaffold: '1.2.0'
+
+      - name: Check Version
+        run: |
+          test "$(skaffold version)" == "v1.2.0"
+
+  test_helm:
+    name: Run Test (helm)
+    runs-on: ${{ matrix.operating-system }}
+    strategy:
+      matrix:
+        operating-system: [ubuntu-latest, windows-latest]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Run Target Action
+        uses: ./
+        with:
+          helm: '3.0.2'
+
+      - name: Check Version
+        run: |
+          test "$(helm version --client --template '{{.Version}}')" == "v3.0.2"
+
+  test_hub:
+    name: Run Test (hub)
+    runs-on: ${{ matrix.operating-system }}
+    strategy:
+      matrix:
+        operating-system: [ubuntu-latest, windows-latest]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Run Target Action
+        uses: ./
+        with:
+          hub: '2.14.0'
+
+      - name: Check Version
+        run: |
+          test "$(hub version |grep hub)" == "hub version 2.14.0"
