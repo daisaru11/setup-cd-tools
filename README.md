@@ -22,7 +22,7 @@ jobs:
     steps:
       ...
       - name: Set up tools
-        uses: daisaru11/setup-cd-tools@master
+        uses: daisaru11/setup-cd-tools@v1
         with:
           kubectl: '1.6.0'
           kustomize: '3.5.4'
