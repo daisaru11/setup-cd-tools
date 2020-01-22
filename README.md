@@ -1,4 +1,4 @@
-A Github Action to set up a variety of tools for Continous Delivery.
+A Github Action to set up a variety of tools for Continuous Delivery.
 
 ## Supported Tools
 

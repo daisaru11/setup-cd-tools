@@ -1,4 +1,6 @@
-name: 'Setup CI tools'
+name: 'Setup CD tools'
+description: 'Set up a variety of tools for Continuous Delivery.'
+author: 'Daichi Sakai'
 inputs:
   jq:
     descriptions: 'The version of jq'
