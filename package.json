@@ -1,8 +1,9 @@
 {
   "name": "setup-cd-tools",
-  "version": "1.0.0",
+  "version": "2.Y.Z",
   "main": "dist/index.js",
   "license": "MIT",
+  "author": "coscene.io",
   "scripts": {
     "build": "ncc build src/index.ts",
     "format": "prettier --write src/**/*.ts",
