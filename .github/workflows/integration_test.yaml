@@ -1,12 +1,12 @@
 name: Integration Test
-on: [push]
+on: [ push ]
 jobs:
   test_jq:
     name: Run Test (jq)
     runs-on: ${{ matrix.operating-system }}
     strategy:
       matrix:
-        operating-system: [ubuntu-latest, windows-latest]
+        operating-system: [ ubuntu-latest, windows-latest ]
     steps:
       - name: Checkout
         uses: actions/checkout@v1
@@ -25,7 +25,7 @@ jobs:
     runs-on: ${{ matrix.operating-system }}
     strategy:
       matrix:
-        operating-system: [ubuntu-latest, windows-latest]
+        operating-system: [ ubuntu-latest, windows-latest ]
     steps:
       - name: Checkout
         uses: actions/checkout@v1
@@ -44,7 +44,7 @@ jobs:
     runs-on: ${{ matrix.operating-system }}
     strategy:
       matrix:
-        operating-system: [ubuntu-latest, windows-latest]
+        operating-system: [ ubuntu-latest, windows-latest ]
     steps:
       - name: Checkout
         uses: actions/checkout@v1
@@ -63,7 +63,7 @@ jobs:
     runs-on: ${{ matrix.operating-system }}
     strategy:
       matrix:
-        operating-system: [ubuntu-latest, windows-latest]
+        operating-system: [ ubuntu-latest, windows-latest ]
     steps:
       - name: Checkout
         uses: actions/checkout@v1
@@ -82,7 +82,7 @@ jobs:
     runs-on: ${{ matrix.operating-system }}
     strategy:
       matrix:
-        operating-system: [ubuntu-latest, windows-latest]
+        operating-system: [ ubuntu-latest, windows-latest ]
     steps:
       - name: Checkout
         uses: actions/checkout@v1
@@ -101,7 +101,7 @@ jobs:
     runs-on: ${{ matrix.operating-system }}
     strategy:
       matrix:
-        operating-system: [ubuntu-latest, windows-latest]
+        operating-system: [ ubuntu-latest, windows-latest ]
     steps:
       - name: Checkout
         uses: actions/checkout@v1
@@ -120,7 +120,7 @@ jobs:
     runs-on: ${{ matrix.operating-system }}
     strategy:
       matrix:
-        operating-system: [ubuntu-latest, windows-latest]
+        operating-system: [ ubuntu-latest, windows-latest ]
     steps:
       - name: Checkout
         uses: actions/checkout@v1
