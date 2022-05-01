@@ -1,4 +1,10 @@
-A Github Action to set up a variety of tools for Continuous Delivery.
+A GitHub Action to set up a variety of tools for Continuous Delivery.
+
+## The folk's feature
+
+- bump dependencies in the `package.json`;
+- bump versions of components to download in integration test;
+- update deprecated fields in the workflows and action config;
 
 ## Supported Tools
 
@@ -23,6 +29,9 @@ jobs:
       ...
       - name: Set up tools
         uses: coscene-io/setup-cd-tools@v2
+        env:
+          # required!!!
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
         with:
           kubectl: '1.22.2'
           kustomize: '4.5.4'
