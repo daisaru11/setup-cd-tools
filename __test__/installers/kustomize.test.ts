@@ -9,7 +9,7 @@ const IS_WINDOWS = process.platform === 'win32';
 describe('kustomize installer tests', () => {
   const installer = new KustomizeInstaller();
 
-  const versions = ['4.5.1'];
+  const versions = ['4.5.4'];
 
   for (const version of versions) {
     it('Acquires the specified version of kustomize', async () => {

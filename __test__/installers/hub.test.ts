@@ -9,7 +9,7 @@ const IS_WINDOWS = process.platform === 'win32';
 describe('hub installer tests', () => {
   const installer = new HubInstaller();
 
-  const versions = ['2.14.0'];
+  const versions = ['2.14.2'];
 
   for (const version of versions) {
     it('Acquires the specified version of hub', async () => {

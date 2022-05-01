@@ -1,6 +1,9 @@
 name: 'Setup CD tools by coscene'
 description: 'Set up a variety of tools for Continuous Delivery.'
-author: 'jiahao.cai@coscene.io'
+author: 'coscene.io'
+branding:
+  icon: 'download-cloud'
+  color: 'blue'
 inputs:
   jq:
     description: 'The version of jq'
