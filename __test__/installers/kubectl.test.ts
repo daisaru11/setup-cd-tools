@@ -9,7 +9,7 @@ const IS_WINDOWS = process.platform === 'win32';
 describe('kubectl installer tests', () => {
   const installer = new KubectlInstaller();
 
-  const versions = ['1.17.2', '1.16.6'];
+  const versions = ['1.22.2'];
 
   for (const version of versions) {
     it('Acquires the specified version of kubectl', async () => {

@@ -9,7 +9,7 @@ const IS_WINDOWS = process.platform === 'win32';
 describe('skaffold installer tests', () => {
   const installer = new SkaffoldInstaller();
 
-  const versions = ['1.2.0'];
+  const versions = ['1.38.0'];
 
   for (const version of versions) {
     it('Acquires the specified version of skaffold', async () => {

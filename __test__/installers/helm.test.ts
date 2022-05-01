@@ -9,7 +9,7 @@ const IS_WINDOWS = process.platform === 'win32';
 describe('helm installer tests', () => {
   const installer = new HelmInstaller();
 
-  const versions = ['3.0.2', '2.16.1'];
+  const versions = ['3.8.0'];
 
   for (const version of versions) {
     it('Acquires the specified version of helm', async () => {

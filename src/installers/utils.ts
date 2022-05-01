@@ -19,7 +19,6 @@ export async function getBinary(
     try {
       downloadPath = await tc.downloadTool(url);
     } catch (error) {
-      core.debug(error);
       throw `Failed to download version ${version}: ${error}`;
     }
 
@@ -57,7 +56,6 @@ export async function getTarballBinary(
     try {
       downloadPath = await tc.downloadTool(url);
     } catch (error) {
-      core.debug(error);
       throw `Failed to download version ${version}: ${error}`;
     }
 

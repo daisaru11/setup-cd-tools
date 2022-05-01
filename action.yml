@@ -1,28 +1,28 @@
-name: 'Setup CD tools'
+name: 'Setup CD tools by coscene'
 description: 'Set up a variety of tools for Continuous Delivery.'
-author: 'Daichi Sakai'
+author: 'jiahao.cai@coscene.io'
 inputs:
   jq:
-    descriptions: 'The version of jq'
+    description: 'The version of jq'
     required: false
   yq:
-    descriptions: 'The version of yq'
+    description: 'The version of yq'
     required: false
   kubectl:
-    descriptions: 'The version of kubectl'
+    description: 'The version of kubectl'
     required: false
   kustomize:
-    descriptions: 'The version of kustomize'
+    description: 'The version of kustomize'
     required: false
   skaffold:
-    descriptions: 'The version of skaffold'
+    description: 'The version of skaffold'
     required: false
   helm:
-    descriptions: 'The version of helm'
+    description: 'The version of helm'
     required: false
   hub:
-    descriptions: 'The version of hub'
+    description: 'The version of hub'
     required: false
 runs:
-  using: 'node12'
+  using: 'node16'
   main: 'dist/index.js'
